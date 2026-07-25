@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sadra Terminal</title>
+
+    <link rel="stylesheet" href="css/terminal.css">
+
+    <link rel="icon" href="assets/logo/imgl-one.png" type="image/png">
+    <link rel="canonical" href="https://sadradaryabaz.com/">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="boot-screen">
+
+        <div class="boot-container">
+
+            <img id="boot-logo" src="assets/logo/imgl-one.png" alt="Sadra Logo">
+
+            <div id="boot-text"></div>
+
+        </div>
+
+    </div>
+
+    <div id="terminal-container">
+
+        <div class="top-bar" id="topBar">
+
+            <div class="window-buttons">
+
+                <span id="closeBtn" class="win-btn red"></span>
+
+                <span id="minBtn" class="win-btn yellow"></span>
+
+                <span id="maxBtn" class="win-btn green"></span>
+
+            </div>
+
+            <div class="window-title">
+
+                root@sadra: ~
+
+            </div>
+
+            <div class="window-info">
+
+                Kali Linux Portfolio
+
+            </div>
+
+            
+        </div>
+    
+        <div id="terminal-output"></div>
+
+        <div class="input-line">
+
+            <span class="prompt">
+
+                ┌──(root㉿sadra)-[~]
+                <br>
+                └─#
+
+            </span>
+
+            <input id="terminal-input" type="text" autocomplete="off" spellcheck="false" autofocus>
+
+        </div>
+
+    </div>
+    <div class="resize top"></div>
+    <div class="resize right"></div>
+    <div class="resize bottom"></div>
+    <div class="resize left"></div>
+
+    <div class="resize top-left"></div>
+    <div class="resize top-right"></div>
+    <div class="resize bottom-left"></div>
+    <div class="resize bottom-right"></div>
+    <script src="js/data.js"></script>
+    <script src="js/commands.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/themes.js"></script>
+    <script src="js/terminal.js"></script>
+
+</body>
+
+</html>

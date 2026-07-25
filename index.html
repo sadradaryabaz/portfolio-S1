@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0f1f" id="metaThemeColor">
+
+  <!-- preconnect اول -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- فونت‌ها یک بار و با display=swap -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="icon" href="assets/logo/imgl-one.png" type="image/png">
+  <link rel="canonical" href="https://sadradaryabaz.com/">
+
+  <title>Home</title>
+
+  <link rel="stylesheet" href="css/index.css">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sadra Daryabaz",
+  "url": "https://sadradaryabaz.com",
+  "image": "https://sadradaryabaz.com/assets/logo/imgl-one.png",
+  "jobTitle": "Full Stack Web Developer",
+  "description": "Personal website of Sadra Daryabaz. Web developer, designer and technology enthusiast.",
+  "nationality": "Iranian",
+  "email": "mailto:sadra.daryabazz@gmail.com",
+
+  "sameAs": [
+    "https://github.com/sadradaryabaz",
+    "https://instagram.com/dry_sadra",
+    "https://instagram.com/sadr.dev",
+    "https://t.me/Sadra_dry"
+  ],
+
+  "knowsAbout": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Python",
+    "Web Development",
+    "UI Design",
+    "Cyber Security",
+    "Linux"
+  ],
+
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "Student"
+  },
+
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Freelancer"
+  }
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"Sadra Portfolio",
+  "url":"https://sadradaryabaz.com",
+  "author":{
+    "@type":"Person",
+    "name":"Sadra Daryabaz"
+  },
+  "inLanguage":"en"
+}
+</script>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Sadra Portfolio">
+  <meta property="og:title" content="Sadra Daryabaz | Full Stack Developer">
+  <meta property="og:description"
+    content="Personal portfolio of Sadra Daryabaz. Explore my projects, skills, resume and technology journey.">
+  <meta property="og:url" content="https://sadradaryabaz.com/">
+  <meta property="og:image" content="https://sadradaryabaz.com/assets/image/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sadra Daryabaz | Full Stack Developer">
+  <meta name="twitter:description" content="Personal portfolio of Sadra Daryabaz.">
+  <meta name="twitter:image" content="https://sadradaryabaz.com/assets/image/og-image.jpg">
+  <link rel="manifest" href="/manifest.json">
+
+  <meta name="theme-color" content="#0a0f1f">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="app.min.js"></script>
+  <link rel="stylesheet" href="style.min.css">
+  <script src="app.js" defer></script>
+  <link rel="preload" as="image" href="/img/hero.webp">
+</head>
+
+
+<body>
+  <!-- Ambient orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+
+  <!-- ════ HEADER ════ -->
+  <header>
+
+    <!-- Logo -->
+    <div class="logo">
+      <img class="logo-light" src="assets/logo/imgd-two.png" alt="Logo" loading="lazy" />
+      <img class="logo-dark" src="assets/logo/imgl-one.png" alt="Logo" loading="lazy" />
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="index.html" data-en="Home" data-fa="خانه" data-de="Startseite">Home</a>
+      <a href="terminal.html" data-en="Terminal" data-fa="ترمینال" data-de="Terminal">Terminal</a>
+      <a href="about.html" data-en="About" data-fa="درباره من" data-de="Über mich">About</a>
+      <a href="resume.html" data-en="Resume" data-fa="رزومه" data-de="Lebenslauf">Resume</a>
+      <a href="project.html" data-en="Projects" data-fa="پروژه‌ها" data-de="Projekte">Projects</a>
+      <a href="interests.html" data-en="Interests" data-fa="علایق" data-de="Interessen">Interests</a>
+      <a href="content.html" data-en="Contact" data-fa="تماس" data-de="Kontakt">Contact</a>
+    </nav>
+
+    <!-- Controls -->
+    <div class="right-controls">
+
+      <div class="theme-panel" id="themePanel">
+
+        <button class="theme-dot default" data-theme=""></button>
+        <button class="theme-dot cyberpunk" data-theme="cyberpunk"></button>
+        <button class="theme-dot matrix" data-theme="matrix"></button>
+        <button class="theme-dot ai" data-theme="ai"></button>
+        <button class="theme-dot sunset" data-theme="sunset"></button>
+
+      </div>
+
+
+      <button class="ctrl-btn" id="langBtn" aria-label="Toggle language">FA</button>
+      <button class="ctrl-btn" id="themeToggle" aria-label="Toggle theme">🌙</button>
+
+      <!-- Hamburger (mobile only) -->
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+  </header>
+
+
+
+
+  <!-- ════ MOBILE DRAWER ════ -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <a href="index.html" data-en="Home" data-fa="خانه" data-de="Startseite">Home</a>
+    <a href="terminal.html" data-en="Terminal" data-fa="ترمینال" data-de="Terminal">Terminal</a>
+    <a href="about.html" data-en="About" data-fa="درباره من" data-de="Über mich">About</a>
+    <a href="resume.html" data-en="Resume" data-fa="رزومه" data-de="Lebenslauf">Resume</a>
+    <a href="project.html" data-en="Projects" data-fa="پروژه‌ها" data-de="Projekte">Projects</a>
+    <a href="interests.html" data-en="Interests" data-fa="علایق" data-de="Interessen">Interests</a>
+    <a href="content.html" data-en="Contact" data-fa="تماس" data-de="Kontakt">Contact</a>
+    <a href="sos.html" data-en="Emergency Sites" data-fa="سایت های اضطراری" data-de="Notfallseiten">Emergency Sites</a>
+    <div class="lang-menu">
+      <p data-en="Language" data-fa="زبان" data-de="Sprache">Language</p>
+
+      <button class="lang-option" data-lang="en">🇺🇸 EN</button>
+      <button class="lang-option" data-lang="fa">🇮🇷 FA</button>
+      <button class="lang-option" data-lang="de">🇩🇪 DE</button>
+    </div>
+
+  </div>
+
+  <!-- ════ MAIN ════ -->
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-tag" data-en="// Personal Site" data-fa="// سایت شخصی" data-de="// Persönliche Website">
+        // Personal Site
+      </div>
+
+      <h1 data-en="Welcome to My Site" data-fa="به وب‌سایت من خوش آمدید" data-de="Willkommen auf meiner Website">
+        Welcome to My Site
+      </h1>
+
+      <p data-en="Explore my portfolio, professional interests, and career trajectory."
+        data-fa="کاوشی در دستاوردها، علایق و سیر تحول حرفه‌ای اینجانب."
+        data-de="Entdecken Sie mein Portfolio, meine beruflichen Interessen und meinen Karriereweg.">
+        Explore my portfolio, professional interests, and career trajectory.
+      </p>
+
+      <a href="resume.html" class="btn" data-en="Learn More" data-fa="بیشتر بدانید" data-de="Mehr erfahren">
+        Learn More
+      </a>
+    </section>
+
+    <!-- Feature cards -->
+    <section class="features" aria-label="Highlights">
+
+      <!-- Card 1 -->
+      <a href="about.html" class="feature-link">
+        <div class="feature">
+
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="8" r="4" />
+              <path d="M4 20c1.5-4 14.5-4 16 0" />
+            </svg>
+          </div>
+
+          <h2 data-en="About Me" data-fa="درباره من" data-de="Über mich">About Me</h2>
+
+          <p data-en="Hey there, I’m Sadra. I actually started coding when I was just fourteen, and now I’m all about focusing on building real, impactful projects."
+            data-fa="سلام، من صدرا هستم. برنامه‌نویسی رو از ۱۴ سالگی شروع کردم و حالا تمام تمرکزم روی پروژه‌های واقعی و عملیاتیه که تاثیرگذار باشن."
+            data-de="Hey, ich bin Sadra. Ich habe mit 14 angefangen zu programmieren und konzentriere mich jetzt darauf, echte und wirkungsvolle Projekte zu bauen.">
+            Hey there, I’m Sadra. I actually started coding when I was just fourteen, and now I’m all about focusing on
+            building real, impactful projects.
+          </p>
+
+        </div>
+      </a>
+
+      <!-- Card 2 -->
+      <a href="resume.html" class="feature-link">
+        <div class="feature">
+
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="5" y="3" width="14" height="18" rx="2" />
+              <line x1="8" y1="8" x2="16" y2="8" />
+              <line x1="8" y1="12" x2="16" y2="12" />
+              <line x1="8" y1="16" x2="13" y2="16" />
+            </svg>
+          </div>
+
+          <h2 data-en="Resume" data-fa="رزومه" data-de="Lebenslauf">Resume</h2>
+
+          <p data-en="A highly motivated High School Junior leveraging strong foundations in Python, Cybersecurity, AI, and Web Development. My commitment to practical application is evidenced by 100+ completed projects, which include formal training via CS50x and specialized coursework from Amirkabir University."
+            data-fa="دانش‌آموز سال آخر دبیرستان که با انگیزه‌ای بالا، مهارت‌های خود را در پایتون، امنیت سایبری، هوش مصنوعی و توسعه وب به کار می‌گیرد. تعهد من به کاربردی‌سازی دانش از طریق بیش از ۱۰۰ پروژه اثبات شده است؛ از جمله گذراندن موفقیت‌آمیز دوره‌های CS50x و دوره‌های تخصصی دانشگاه امیرکبیر."
+            data-de="Ein hochmotivierter Schüler im letzten Jahr der High School mit starken Grundlagen in Python, Cybersicherheit, KI und Webentwicklung. Mein praktischer Fokus zeigt sich in über 100 abgeschlossenen Projekten sowie Kursen wie CS50x und spezialisierten Programmen der Amirkabir-Universität.">
+            A highly motivated High School Junior leveraging strong foundations in Python, Cybersecurity, AI, and Web
+            Development. My commitment to practical application is evidenced by 100+ completed projects, which include
+            formal training via CS50x and specialized coursework from Amirkabir University.
+          </p>
+
+        </div>
+      </a>
+
+      <!-- Card 3 -->
+      <a href="interests.html" class="feature-link">
+        <div class="feature">
+
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8">
+              <circle cx="12" cy="12" r="9" />
+              <circle cx="12" cy="12" r="5" />
+              <circle cx="12" cy="12" r="2" />
+            </svg>
+          </div>
+
+          <h2 data-en="Goals" data-fa="هدف‌ها" data-de="Ziele">Goals</h2>
+
+          <p data-en="My professional trajectory is focused on becoming a recognized contributor to the technology community, aiming to build a career that honors my family’s aspirations. A long-term personal goal includes exploring technological opportunities, potentially in Germany."
+            data-fa="مسیر حرفه‌ای من بر تبدیل شدن به یک متخصص شناخته‌شده و تأثیرگذار در جامعه فناوری متمرکز است، با هدفی که پاسدار آرزوهای خانواده‌ام باشد. یکی از اهداف شخصی بلندمدت من، کاوش فرصت‌های فناورانه، به طور خاص در آلمان است."
+            data-de="Mein beruflicher Weg konzentriert sich darauf, ein anerkannter Beitragender zur Tech-Community zu werden und eine Karriere aufzubauen, die die Wünsche meiner Familie ehrt. Ein langfristiges Ziel ist es, technologische Möglichkeiten zu erkunden, insbesondere in Deutschland.">
+            My professional trajectory is focused on becoming a recognized contributor to the technology community,
+            aiming to build a career that honors my family’s aspirations. A long-term personal goal includes exploring
+            technological opportunities, potentially in Germany.
+          </p>
+
+        </div>
+      </a>
+
+    </section>
+
+  </main>
+
+  <!-- ════ FOOTER ════ -->
+  <footer data-en="// Developed by Sadra" data-fa="// توسعه‌یافته توسط صدرا" data-de="// Entwickelt von Sadra">
+    //Developed by Sadra
+  </footer>
+
+  <!-- ════ JS ════ -->
+  <script src="js/index.js"></script>
+  <script src="js/lang.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1117 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html,
+body {
+
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: #050505;
+
+    overflow: hidden;
+
+    font-family: "Fira Code", monospace;
+
+}
+
+#terminal-container {
+
+    width: min(1600px, 95vw);
+
+    height: min(900px, 94vh);
+
+    margin: auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #000;
+
+    border: 1px solid #1f1f1f;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    box-shadow:
+
+        0 0 40px rgba(0, 255, 136, .20),
+
+        0 25px 80px rgba(0, 0, 0, .75);
+
+}
+
+.top-bar {
+
+    height: 46px;
+
+    background: #1c1c1c;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 18px;
+
+    border-bottom: 1px solid #2b2b2b;
+
+}
+
+#terminal-output {
+
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 20px;
+
+    color: #00ff88;
+
+    background: #000;
+
+    font-size: clamp(13px, 1vw, 17px);
+
+    line-height: 1.6;
+
+}
+
+.input-line {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 20px;
+
+    border-top: 1px solid #222;
+
+    background: #050505;
+
+}
+
+#terminal-input {
+
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: #00ff88;
+
+    font-family: inherit;
+
+    font-size: clamp(13px, 1vw, 17px);
+
+}
+
+/* ========================== */
+/* Mobile */
+/* ========================== */
+
+@media(max-width:768px) {
+
+    body {
+
+        display: block;
+
+        background: #000;
+
+    }
+
+    #terminal-container {
+
+        width: 100vw;
+
+        height: 100vh;
+
+        border-radius: 0;
+
+        border: none;
+
+        box-shadow: none;
+
+    }
+
+    .top-bar {
+
+        height: 42px;
+
+    }
+
+    #terminal-output {
+
+        padding: 14px;
+
+    }
+
+    .input-line {
+
+        padding: 10px;
+
+    }
+
+    #boot-logo {
+
+        width: 180px;
+
+    }
+
+}
+
+
+/* ========================== */
+/* Tablet */
+/* ========================== */
+
+@media(min-width:769px) and (max-width:1200px) {
+
+    #terminal-container {
+
+        width: 97vw;
+
+        height: 95vh;
+
+    }
+
+}
+
+
+/* ========================== */
+/* Ultra Wide */
+/* ========================== */
+
+@media(min-width:1800px) {
+
+    #terminal-container {
+
+        width: 1600px;
+
+        height: 920px;
+
+    }
+
+}
+
+#terminal-output::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+#terminal-output::-webkit-scrollbar-track {
+
+    background: #050505;
+
+}
+
+#terminal-output::-webkit-scrollbar-thumb {
+
+    background: #00ff88;
+
+    border-radius: 20px;
+
+}
+
+body {
+
+    background: #0b0f14;
+
+    font-family: 'Fira Code', monospace;
+
+    color: #00ff88;
+
+    height: 100vh;
+
+    overflow: hidden;
+
+}
+
+#boot-screen {
+
+    position: fixed;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: black;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+
+}
+
+.boot-logo {
+
+    color: #00ff66;
+
+    font-size: 15px;
+
+}
+
+#boot-text {
+
+    margin-top: 30px;
+
+    color: white;
+
+    font-size: 18px;
+
+}
+
+#terminal-container {
+
+    display: none;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: #111;
+
+}
+
+.top-bar {
+
+    height: 45px;
+
+    background: #202225;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 20px;
+
+}
+
+.buttons {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+.buttons span {
+
+    width: 14px;
+
+    height: 14px;
+
+    border-radius: 50%;
+
+    display: block;
+
+}
+
+.red {
+
+    background: #ff5f57;
+
+}
+
+.yellow {
+
+    background: #febc2e;
+
+}
+
+.green {
+
+    background: #28c840;
+
+}
+
+.title {
+
+    color: white;
+
+    font-size: 14px;
+
+}
+
+#terminal-output {
+
+    height: calc(100vh - 110px);
+
+    overflow-y: auto;
+
+    padding: 20px;
+
+    white-space: pre-wrap;
+
+}
+
+.input-line {
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 20px;
+
+    gap: 15px;
+
+}
+
+.prompt {
+
+    color: #00ff88;
+
+}
+
+#terminal-input {
+
+    flex: 1;
+
+    background: transparent;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 18px;
+
+    font-family: inherit;
+
+    color: white;
+
+}
+
+.cursor {
+
+    animation: blink .8s infinite;
+
+}
+
+@keyframes blink {
+
+    50% {
+
+        opacity: 0;
+
+    }
+
+}
+
+.boot-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+#boot-logo {
+
+    width: 280px;
+
+    margin-bottom: 40px;
+
+    user-select: none;
+
+    pointer-events: none;
+
+    filter:
+
+        drop-shadow(0 0 10px #00ff88) drop-shadow(0 0 25px #00ff88) drop-shadow(0 0 45px #00ff88);
+
+    animation:
+
+        bootGlow 2s ease-in-out infinite alternate;
+
+}
+
+@keyframes bootGlow {
+
+    from {
+
+        transform: scale(.97);
+
+        opacity: .9;
+
+    }
+
+    to {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+#boot-text {
+
+    color: #00ff88;
+
+    font-size: 18px;
+
+    font-family: Fira Code, monospace;
+
+    line-height: 34px;
+
+}
+
+.fade-out {
+
+    animation: fadeOut .8s forwards;
+
+}
+
+@keyframes fadeOut {
+
+    from {
+
+        opacity: 1;
+
+    }
+
+    to {
+
+        opacity: 0;
+
+    }
+
+}
+
+/* ========================= */
+/* Responsive Terminal */
+/* ========================= */
+
+/* Large Screens */
+@media (min-width:1600px) {
+
+    #terminal-output {
+
+        font-size: 18px;
+
+    }
+
+    #terminal-input {
+
+        font-size: 18px;
+
+    }
+
+    #boot-logo {
+
+        width: 350px;
+
+    }
+
+}
+
+/* Laptop */
+@media (max-width:1200px) {
+
+    #terminal-output {
+
+        padding: 18px;
+
+        font-size: 16px;
+
+    }
+
+    #terminal-input {
+
+        font-size: 16px;
+
+    }
+
+    #boot-logo {
+
+        width: 260px;
+
+    }
+
+}
+
+/* Tablet */
+@media (max-width:992px) {
+
+    .top-bar {
+
+        height: 42px;
+
+        padding: 0 15px;
+
+    }
+
+    .title {
+
+        font-size: 13px;
+
+    }
+
+    .prompt {
+
+        font-size: 14px;
+
+    }
+
+    #terminal-output {
+
+        padding: 15px;
+
+        font-size: 15px;
+
+    }
+
+    #terminal-input {
+
+        font-size: 15px;
+
+    }
+
+    #boot-logo {
+
+        width: 220px;
+
+    }
+
+}
+
+/* Mobile */
+@media (max-width:768px) {
+
+    body {
+
+        overflow: hidden;
+
+    }
+
+    .top-bar {
+
+        height: 40px;
+
+    }
+
+    .buttons span {
+
+        width: 12px;
+
+        height: 12px;
+
+    }
+
+    .title {
+
+        font-size: 12px;
+
+    }
+
+    #terminal-output {
+
+        height: calc(100vh - 95px);
+
+        padding: 12px;
+
+        font-size: 14px;
+
+    }
+
+    .input-line {
+
+        padding: 10px;
+
+        gap: 10px;
+
+    }
+
+    .prompt {
+
+        font-size: 12px;
+
+        line-height: 18px;
+
+    }
+
+    #terminal-input {
+
+        font-size: 14px;
+
+    }
+
+    #boot-logo {
+
+        width: 180px;
+
+    }
+
+    #boot-text {
+
+        font-size: 14px;
+
+        line-height: 24px;
+
+    }
+
+}
+
+/* Small Phones */
+@media (max-width:480px) {
+
+    .top-bar {
+
+        padding: 0 10px;
+
+    }
+
+    .title {
+
+        display: none;
+
+    }
+
+    #terminal-output {
+
+        font-size: 13px;
+
+        padding: 10px;
+
+    }
+
+    .input-line {
+
+        gap: 6px;
+
+    }
+
+    .prompt {
+
+        font-size: 11px;
+
+    }
+
+    #terminal-input {
+
+        font-size: 13px;
+
+    }
+
+    #boot-logo {
+
+        width: 150px;
+
+    }
+
+    #boot-text {
+
+        font-size: 12px;
+
+        line-height: 20px;
+
+    }
+
+}
+
+/* Very Small Devices */
+@media (max-width:360px) {
+
+    #boot-logo {
+
+        width: 120px;
+
+    }
+
+    #terminal-output {
+
+        font-size: 12px;
+
+    }
+
+    .prompt {
+
+        display: none;
+
+    }
+
+    #terminal-input {
+
+        width: 100%;
+
+        font-size: 12px;
+
+    }
+
+}
+
+#terminal-container {
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 100%;
+
+    height: 100vh;
+
+}
+
+#terminal-output {
+
+    flex: 1;
+
+    overflow-y: auto;
+
+}
+
+/* =============================== */
+/* Window Header */
+/* =============================== */
+
+.top-bar {
+
+    backdrop-filter: blur(18px);
+
+    background: rgba(25, 25, 25, .85);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 18px;
+
+    cursor: move;
+
+    user-select: none;
+
+}
+
+/* =============================== */
+
+.window-buttons {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+/* =============================== */
+
+.win-btn {
+
+    width: 14px;
+
+    height: 14px;
+
+    border-radius: 50%;
+
+    transition: .25s;
+
+}
+
+/* =============================== */
+
+.red {
+
+    background: #ff5f56;
+
+}
+
+.yellow {
+
+    background: #ffbd2e;
+
+}
+
+.green {
+
+    background: #27c93f;
+
+}
+
+/* =============================== */
+
+.win-btn:hover {
+
+    transform: scale(1.2);
+
+    box-shadow: 0 0 12px currentColor;
+
+}
+
+/* =============================== */
+
+.window-title {
+
+    color: white;
+
+    font-weight: 600;
+
+    font-size: 14px;
+
+}
+
+/* =============================== */
+
+.window-info {
+
+    color: #888;
+
+    font-size: 13px;
+
+}
+
+#terminal-container {
+
+    animation: bootWindow .7s;
+
+}
+
+@keyframes bootWindow {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+
+            translateY(50px) scale(.85);
+
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+
+            translateY(0) scale(1);
+
+    }
+
+}
+
+#terminal-container {
+
+    transition:
+
+        transform .25s,
+
+        box-shadow .25s;
+
+}
+
+#terminal-container:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+
+        0 0 30px rgba(0, 255, 120, .2),
+
+        0 25px 60px rgba(0, 0, 0, .7);
+
+}
+
+.resize {
+
+    position: absolute;
+
+    z-index: 9999;
+
+}
+
+.top {
+
+    top: -4px;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 8px;
+
+    cursor: n-resize;
+
+}
+
+.bottom {
+
+    bottom: -4px;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 8px;
+
+    cursor: s-resize;
+
+}
+
+.left {
+
+    left: -4px;
+
+    top: 0;
+
+    width: 8px;
+
+    height: 100%;
+
+    cursor: w-resize;
+
+}
+
+.right {
+
+    right: -4px;
+
+    top: 0;
+
+    width: 8px;
+
+    height: 100%;
+
+    cursor: e-resize;
+
+}
+
+.top-left {
+
+    top: -4px;
+
+    left: -4px;
+
+    width: 10px;
+
+    height: 10px;
+
+    cursor: nw-resize;
+
+}
+
+.top-right {
+
+    top: -4px;
+
+    right: -4px;
+
+    width: 10px;
+
+    height: 10px;
+
+    cursor: ne-resize;
+
+}
+
+.bottom-left {
+
+    bottom: -4px;
+
+    left: -4px;
+
+    width: 10px;
+
+    height: 10px;
+
+    cursor: sw-resize;
+
+}
+
+.bottom-right {
+
+    bottom: -4px;
+
+    right: -4px;
+
+    width: 10px;
+
+    height: 10px;
+
+    cursor: se-resize;
+
+}
+
+#explorer {
+
+    width: 240px;
+
+    background: #111;
+
+    border-right: 1px solid #333;
+
+    overflow: auto;
+
+}
+
+.folder {
+
+    padding: 10px 16px;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+.folder:hover {
+
+    background: #222;
+
+}
+
+.explorer-title {
+
+    padding: 15px;
+
+    font-weight: bold;
+
+    background: #181818;
+
+}
+
+#terminal-container {
+
+    display: flex;
+
+}
+
+#terminal-content {
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+

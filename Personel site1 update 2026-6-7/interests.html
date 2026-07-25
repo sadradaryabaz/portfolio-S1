@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0f1f" id="metaThemeColor">
+
+  <link rel="icon" href="assets/logo/imgl-one.png" type="image/png">
+
+  <meta name="description"
+    content="سایت شخصی صدرا، برنامه‌نویس وب. مشاهده پروژه‌ها، رزومه، مهارت‌ها و علایق من در دنیای تکنولوژی.">
+
+  <link rel="canonical" href="https://sadradaryabaz.com/interests.html">
+
+  <title data-en="Interests" data-fa="علایق" data-de="Interessen">Interests</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/interests.css" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Sadra Daryabaz",
+  "url": "https://sadradaryabaz.com",
+  "image": "https://sadradaryabaz.com/assets/logo/imgl-one.png",
+  "jobTitle": "Full Stack Web Developer",
+  "description": "Personal website of Sadra Daryabaz. Web developer, designer and technology enthusiast.",
+  "nationality": "Iranian",
+  "email": "mailto:sadra.daryabazz@gmail.com",
+
+  "sameAs": [
+    "https://github.com/sadradaryabaz",
+    "https://instagram.com/dry_sadra",
+    "https://instagram.com/sadr.dev",
+    "https://t.me/Sadra_dry"
+  ],
+
+  "knowsAbout": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Python",
+    "Web Development",
+    "UI Design",
+    "Cyber Security",
+    "Linux"
+  ],
+
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "Student"
+  },
+
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Freelancer"
+  }
+}
+</script>
+
+  <script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"Sadra Portfolio",
+  "url":"https://sadradaryabaz.com",
+  "author":{
+    "@type":"Person",
+    "name":"Sadra Daryabaz"
+  },
+  "inLanguage":"en"
+}
+</script>
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Sadra Portfolio">
+  <meta property="og:title" content="Sadra Daryabaz | Full Stack Developer">
+  <meta property="og:description"
+    content="Personal portfolio of Sadra Daryabaz. Explore my projects, skills, resume and technology journey.">
+  <meta property="og:url" content="https://sadradaryabaz.com/">
+  <meta property="og:image" content="https://sadradaryabaz.com/assets/image/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Sadra Daryabaz | Full Stack Developer">
+  <meta name="twitter:description" content="Personal portfolio of Sadra Daryabaz.">
+  <meta name="twitter:image" content="https://sadradaryabaz.com/assets/image/og-image.jpg">
+</head>
+
+<body>
+
+  <!-- Particle Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Ambient orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- ════ HEADER ════ -->
+  <header>
+
+    <!-- Logo -->
+    <div class="logo">
+      <img class="logo-light" src="assets/logo/imgd-two.png" alt="Logo" loading="lazy" />
+      <img class="logo-dark" src="assets/logo/imgl-one.png" alt="Logo" loading="lazy" />
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="index.html" data-en="Home" data-fa="خانه" data-de="Startseite">Home</a>
+
+      <a href="terminal.html" data-en="Terminal" data-fa="ترمینال" data-de="Terminal">Terminal</a>
+
+      <a href="about.html" data-en="About" data-fa="درباره من" data-de="Über mich">About</a>
+
+      <a href="resume.html" data-en="Resume" data-fa="رزومه" data-de="Lebenslauf">Resume</a>
+
+      <a href="project.html" data-en="Projects" data-fa="پروژه‌ها" data-de="Projekte">Projects</a>
+
+      <a href="interests.html" data-en="Interests" data-fa="علایق" data-de="Interessen">Interests</a>
+
+      <a href="content.html" data-en="Contact" data-fa="تماس" data-de="Kontakt">Contact</a>
+    </nav>
+
+    <!-- Controls -->
+    <div class="right-controls">
+
+      <div class="theme-panel" id="themePanel">
+        <button class="theme-dot default" data-theme=""></button>
+        <button class="theme-dot cyberpunk" data-theme="cyberpunk"></button>
+        <button class="theme-dot matrix" data-theme="matrix"></button>
+        <button class="theme-dot ai" data-theme="ai"></button>
+        <button class="theme-dot sunset" data-theme="sunset"></button>
+      </div>
+
+      <button class="ctrl-btn" id="langBtn" aria-label="Toggle language">
+        FA
+      </button>
+
+      <button class="ctrl-btn" id="themeToggle" aria-label="Toggle theme">
+        🌙
+      </button>
+
+      <!-- Hamburger (mobile only) -->
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </div>
+
+  </header>
+
+  <!-- ════ MOBILE DRAWER ════ -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+
+    <a href="index.html" data-en="Home" data-fa="خانه" data-de="Startseite">Home</a>
+
+    <a href="about.html" data-en="About" data-fa="درباره من" data-de="Über mich">About</a>
+
+    <a href="resume.html" data-en="Resume" data-fa="رزومه" data-de="Lebenslauf">Resume</a>
+
+    <a href="project.html" data-en="Projects" data-fa="پروژه‌ها" data-de="Projekte">Projects</a>
+
+    <a href="interests.html" data-en="Interests" data-fa="علایق" data-de="Interessen">Interests</a>
+
+    <a href="content.html" data-en="Contact" data-fa="تماس" data-de="Kontakt">Contact</a>
+
+  </div>
+
+  <!-- ════ MAIN ════ -->
+  <main>
+
+    <!-- Hero / Page Header -->
+    <section class="hero">
+
+      <div class="hero-tag" data-en="// My Interests" data-fa="// علایق من" data-de="// Meine Interessen">
+        // My Interests
+      </div>
+
+      <h1 data-en="Interests" data-fa="علایق" data-de="Interessen">
+        Interests
+      </h1>
+
+      <p class="hero-subtitle" data-en="Things I'm passionate about — beyond code and screens."
+        data-fa="چیزهایی که بهشون علاقه‌مندم — فراتر از کد و صفحه‌نمایش."
+        data-de="Dinge, für die ich mich begeistere – weit über Code und Bildschirme hinaus.">
+        Things I'm passionate about — beyond code and screens.
+      </p>
+
+      <div class="hero-typing">
+        <span class="typing-text" id="typingText"></span>
+        <span class="typing-cursor">|</span>
+      </div>
+
+      <!-- Stats Bar -->
+      <div class="hero-stats">
+
+        <div class="stat-item">
+          <span class="stat-number" data-count="6">0</span>
+          <span class="stat-label" data-en="Interests" data-fa="علاقه‌مندی" data-de="Interessen">
+            Interests
+          </span>
+        </div>
+
+        <div class="stat-divider"></div>
+
+        <div class="stat-item">
+          <span class="stat-number" data-count="3">0</span>
+          <span class="stat-label" data-en="Categories" data-fa="دسته‌بندی" data-de="Kategorien">
+            Categories
+          </span>
+        </div>
+
+        <div class="stat-divider"></div>
+
+        <div class="stat-item">
+          <span class="stat-number" data-count="100">0</span>
+          <span class="stat-label" data-en="% Passionate" data-fa="٪ علاقه‌مندی" data-de="% Leidenschaft">
+            % Passionate
+          </span>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Category Filter -->
+    <div class="filter-bar">
+
+      <button class="filter-btn active" data-filter="all" data-en="All" data-fa="همه" data-de="Alle">
+        All
+      </button>
+
+      <button class="filter-btn" data-filter="tech" data-en="Technology" data-fa="تکنولوژی" data-de="Technologie">
+        Technology
+      </button>
+
+      <button class="filter-btn" data-filter="lifestyle" data-en="Lifestyle" data-fa="سبک زندگی" data-de="Lebensstil">
+        Lifestyle
+      </button>
+
+      <button class="filter-btn" data-filter="entertainment" data-en="Entertainment" data-fa="سرگرمی"
+        data-de="Unterhaltung">
+        Entertainment
+      </button>
+
+    </div>
+
+    <!-- Interest Cards Grid -->
+    <div class="interests-grid">
+      <!-- Card 1 — Programming -->
+      <div class="interest-card" data-category="tech" data-tilt>
+        <div class="card-badge" data-en="Passion" data-fa="اشتیاق" data-de="Leidenschaft">Passion</div>
+
+        <div class="card-glow"></div>
+
+        <div class="card-icon-wrap">
+          <span class="card-icon">💻</span>
+          <div class="icon-ring"></div>
+        </div>
+
+        <h3 data-en="Programming" data-fa="برنامه‌نویسی" data-de="Programmierung">
+          Programming
+        </h3>
+
+        <p data-en="Love building websites, apps, and learning new technologies. From frontend to backend, coding is my daily adventure."
+          data-fa="علاقه‌مند به توسعه وب‌سایت‌ها، اپلیکیشن‌ها و یادگیری فناوری‌های نوین هستم. از فرانت‌اند تا بک‌اند، کدنویسی ماجراجویی روزانه من است."
+          data-de="Ich entwickle leidenschaftlich Websites und Anwendungen und lerne ständig neue Technologien. Vom Frontend bis zum Backend ist Programmieren mein tägliches Abenteuer.">
+          Love building websites, apps, and learning new technologies. From frontend to backend, coding is my daily
+          adventure.
+        </p>
+
+        <div class="card-progress">
+          <div class="progress-label">
+            <span data-en="Passion Level" data-fa="سطح علاقه" data-de="Leidenschaftsgrad">
+              Passion Level
+            </span>
+            <span>95%</span>
+          </div>
+
+          <div class="progress-bar">
+            <div class="progress-fill" data-width="95"></div>
+          </div>
+        </div>
+
+        <div class="card-tags">
+          <span class="tag">JavaScript</span>
+          <span class="tag">React</span>
+          <span class="tag">Python</span>
+        </div>
+      </div>
+
+      <!-- Card 2 — Reading -->
+      <div class="interest-card" data-category="lifestyle" data-tilt>
+
+        <div class="card-badge" data-en="Growth" data-fa="رشد" data-de="Weiterentwicklung">
+          Growth
+        </div>
+
+        <div class="card-glow"></div>
+
+        <div class="card-icon-wrap">
+          <span class="card-icon">📚</span>
+          <div class="icon-ring"></div>
+        </div>
+
+        <h3 data-en="Reading" data-fa="مطالعه" data-de="Lesen">
+          Reading
+        </h3>
+
+        <p data-en="Passionate about books on science, math, and personal growth. Knowledge is the ultimate power."
+          data-fa="علاقه‌مند و مشتاق مطالعه کتاب‌های مرتبط با علم، ریاضیات و رشد فردی هستم. دانش قدرت نهایی است."
+          data-de="Ich lese leidenschaftlich Bücher über Wissenschaft, Mathematik und persönliche Entwicklung. Wissen ist die größte Kraft.">
+          Passionate about books on science, math, and personal growth. Knowledge is the ultimate power.
+        </p>
+
+        <div class="card-progress">
+          <div class="progress-label">
+            <span data-en="Passion Level" data-fa="سطح علاقه" data-de="Leidenschaftsgrad">
+              Passion Level
+            </span>
+            <span>85%</span>
+          </div>
+
+          <div class="progress-bar">
+            <div class="progress-fill" data-width="85"></div>
+          </div>
+        </div>
+
+        <div class="card-tags">
+          <span class="tag" data-en="Science" data-fa="علوم" data-de="Wissenschaft">
+            Science
+          </span>
+
+          <span class="tag" data-en="Philosophy" data-fa="فلسفه" data-de="Philosophie">
+            Philosophy
+          </span>
+
+          <span class="tag" data-en="Self-Help" data-fa="خودسازی" data-de="Persönlichkeitsentwicklung">
+            Self-Help
+          </span>
+        </div>
+      </div>
+
+      <!-- Card 3 — Sports -->
+      <div class="interest-card" data-category="lifestyle" data-tilt>
+
+        <div class="card-badge" data-en="Fitness" data-fa="تناسب اندام" data-de="Fitness">
+          Fitness
+        </div>
+
+        <div class="card-glow"></div>
+
+        <div class="card-icon-wrap">
+          <span class="card-icon">🥋</span>
+          <div class="icon-ring"></div>
+        </div>
+
+        <h3 data-en="Sports" data-fa="ورزش" data-de="Sport">
+          Sports
+        </h3>
+
+        <p data-en="Enjoy Karate, swimming, and outdoor activities for fitness. A healthy body builds a healthy mind."
+          data-fa="از کاراته، شنا و فعالیت‌های ورزشی در فضای باز برای حفظ آمادگی جسمانی لذت می‌برم. بدن سالم، ذهن سالم می‌سازد."
+          data-de="Ich genieße Karate, Schwimmen und Outdoor-Aktivitäten, um fit zu bleiben. Ein gesunder Körper schafft einen gesunden Geist.">
+          Enjoy Karate, swimming, and outdoor activities for fitness. A healthy body builds a healthy mind.
+        </p>
+
+        <div class="card-progress">
+          <div class="progress-label">
+            <span data-en="Passion Level" data-fa="سطح علاقه" data-de="Leidenschaftsgrad">
+              Passion Level
+            </span>
+            <span>80%</span>
+          </div>
+
+          <div class="progress-bar">
+            <div class="progress-fill" data-width="80"></div>
+          </div>
+        </div>
+
+        <div class="card-tags">
+          <span class="tag" data-en="Karate" data-fa="کاراته" data-de="Karate">
+            Karate
+          </span>
+
+          <span class="tag" data-en="Swimming" data-fa="شنا" data-de="Schwimmen">
+            Swimming
+          </span>
+
+          <span class="tag" data-en="Hiking" data-fa="کوهنوردی" data-de="Wandern">
+            Hiking
+          </span>
+        </div>
+      </div>
+      <!-- Card 4 — Music -->
+      <div class="interest-card" data-category="entertainment" data-tilt>
+
+        <div class="card-badge" data-en="Creative" data-fa="خلاقانه" data-de="Kreativität">
+          Creative
+        </div>
+
+        <div class="card-glow"></div>
+
+        <div class="card-icon-wrap">
+          <span class="card-icon">🎵</span>
+          <div class="icon-ring"></div>
+        </div>
+
+        <h3 data-en="Music" data-fa="موسیقی" data-de="Musik">
+          Music
+        </h3>
+
+        <p data-en="Music fuels my creativity. From ambient coding playlists to energetic beats, it's always playing."
+          data-fa="موسیقی سوخت خلاقیت من است. از پلی‌لیست‌های آرام کدنویسی تا ریتم‌های پرانرژی، همیشه در حال پخش است."
+          data-de="Musik beflügelt meine Kreativität. Von entspannten Coding-Playlists bis hin zu energiegeladenen Beats begleitet sie mich ständig.">
+          Music fuels my creativity. From ambient coding playlists to energetic beats, it's always playing.
+        </p>
+
+        <div class="card-progress">
+          <div class="progress-label">
+            <span data-en="Passion Level" data-fa="سطح علاقه" data-de="Leidenschaftsgrad">
+              Passion Level
+            </span>
+            <span>90%</span>
+          </div>
+
+          <div class="progress-bar">
+            <div class="progress-fill" data-width="90"></div>
+          </div>
+        </div>
+
+        <div class="card-tags">
+          <span class="tag">Lo-Fi</span>
+          <span class="tag">Electronic</span>
+          <span class="tag">Classical</span>
+        </div>
+      </div>
+
+      <!-- Card 5 — Gaming -->
+      <div class="interest-card" data-category="entertainment" data-tilt>
+
+        <div class="card-badge" data-en="Fun" data-fa="تفریح" data-de="Spaß">
+          Fun
+        </div>
+
+        <div class="card-glow"></div>
+
+        <div class="card-icon-wrap">
+          <span class="card-icon">🎮</span>
+          <div class="icon-ring"></div>
+        </div>
+
+        <h3 data-en="Gaming" data-fa="بازی" data-de="Gaming">
+          Gaming
+        </h3>
+
+        <p data-en="Strategic and adventure games sharpen my problem-solving skills. Gaming is thinking in disguise."
+          data-fa="بازی‌های استراتژیک و ماجراجویانه مهارت حل مسئله من را تقویت می‌کنند. بازی، تفکر در لباس مبدل است."
+          data-de="Strategie- und Abenteuerspiele fördern mein Problemlösungsvermögen. Gaming ist Denken in einer anderen Form.">
+          Strategic and adventure games sharpen my problem-solving skills. Gaming is thinking in disguise.
+        </p>
+
+        <div class="card-progress">
+          <div class="progress-label">
+            <span data-en="Passion Level" data-fa="سطح علاقه" data-de="Leidenschaftsgrad">
+              Passion Level
+            </span>
+            <span>75%</span>
+          </div>
+
+          <div class="progress-bar">
+            <div class="progress-fill" data-width="75"></div>
+          </div>
+        </div>
+
+        <div class="card-tags">
+          <span class="tag" data-en="Strategy" data-fa="استراتژی" data-de="Strategie">
+            Strategy
+          </span>
+
+          <span class="tag">RPG</span>
+
+          <span class="tag" data-en="Puzzle" data-fa="پازل" data-de="Puzzle">
+            Puzzle
+          </span>
+        </div>
+      </div>
+
+      <!-- Card 6 — Travel & Exploration -->
+      <div class="interest-card" data-category="lifestyle" data-tilt>
+
+        <div class="card-badge" data-en="Adventure" data-fa="ماجراجویی" data-de="Abenteuer">
+          Adventure
+        </div>
+
+        <div class="card-glow"></div>
+
+        <div class="card-icon-wrap">
+          <span class="card-icon">✈️</span>
+          <div class="icon-ring"></div>
+        </div>
+
+        <h3 data-en="Travel & Exploration" data-fa="سفر و کاوش" data-de="Reisen & Entdecken">
+          Travel & Exploration
+        </h3>
+
+        <p data-en="Discovering new places, cultures, and perspectives. Every journey teaches something code can't."
+          data-fa="کشف مکان‌ها، فرهنگ‌ها و دیدگاه‌های جدید. هر سفر چیزی یاد می‌دهد که کد نمی‌تواند."
+          data-de="Neue Orte, Kulturen und Perspektiven zu entdecken begeistert mich. Jede Reise lehrt etwas, das kein Code vermitteln kann.">
+          Discovering new places, cultures, and perspectives. Every journey teaches something code can't.
+        </p>
+
+        <div class="card-progress">
+          <div class="progress-label">
+            <span data-en="Passion Level" data-fa="سطح علاقه" data-de="Leidenschaftsgrad">
+              Passion Level
+            </span>
+            <span>70%</span>
+          </div>
+
+          <div class="progress-bar">
+            <div class="progress-fill" data-width="70"></div>
+          </div>
+        </div>
+
+        <div class="card-tags">
+          <span class="tag" data-en="Nature" data-fa="طبیعت" data-de="Natur">
+            Nature
+          </span>
+
+          <span class="tag" data-en="Culture" data-fa="فرهنگ" data-de="Kultur">
+            Culture
+          </span>
+
+          <span class="tag" data-en="Photography" data-fa="عکاسی" data-de="Fotografie">
+            Photography
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+      <div class="quote-card">
+
+        <div class="quote-icon">"</div>
+
+        <blockquote data-en="The only way to do great work is to love what you do."
+          data-fa="تنها راه انجام کار بزرگ، عشق به آنچه انجام می‌دهی است."
+          data-de="Der einzige Weg, großartige Arbeit zu leisten, ist zu lieben, was man tut.">
+          The only way to do great work is to love what you do.
+        </blockquote>
+
+        <cite>— Steve Jobs</cite>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ════ FOOTER ════ -->
+  <footer data-en="// Developed by Sadra" data-fa="// توسعه‌یافته توسط صدرا" data-de="// Entwickelt von Sadra">
+    // Developed by Sadra
+  </footer>
+
+  <script src="js/interests.js"></script>
+  <script src="js/lang.js"></script>
+
+</body>
+
+</html>

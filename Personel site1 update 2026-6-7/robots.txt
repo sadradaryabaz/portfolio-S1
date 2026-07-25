@@ -1,0 +1,10 @@
+root/
+ ├── index.html
+ ├── about.html
+ ├── project.html
+ ├── resume.html
+ ├── interests.html
+ ├── content.html
+ ├── css/
+ ├── js/
+ └── assets/
